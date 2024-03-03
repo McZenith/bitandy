@@ -1,9 +1,7 @@
 import { redirect } from "next/navigation";
 
 async function getData() {
-  await fetch(
-    process.env.NEXT_PUBLIC_URL ?? "https://bitandy.vercel.app" + "/api/aws"
-  );
+  await fetch("https://bitandy.vercel.app/api/aws");
 }
 
 export default async function Home() {
