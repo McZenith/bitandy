@@ -1,10 +1,9 @@
 import { redirect } from "next/navigation";
 
 async function getData() {
-
-  const res = await import("../app/api/aws/route");
-
-  return await (await res.GET()).json();
+  await fetch(
+    process.env.NEXT_PUBLIC_URL ?? "https://bitandy.vercel.app" + "/api/aws"
+  );
 }
 
 export default async function Home() {
