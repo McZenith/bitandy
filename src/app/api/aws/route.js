@@ -1,4 +1,5 @@
 import { EC2 } from "aws-sdk";
+export const dynamic = "force-dynamic";
 
 export async function GET(req, res) {
   // AWS credentials and region setup
