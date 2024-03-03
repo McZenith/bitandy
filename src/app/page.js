@@ -1,7 +1,10 @@
 import { redirect } from "next/navigation";
 
 async function getData() {
-  await fetch(process.env.NEXT_PUBLIC_URL + "/api/aws");
+
+  const res = await import("../app/api/aws/route");
+
+  return await (await res.GET()).json();
 }
 
 export default async function Home() {
